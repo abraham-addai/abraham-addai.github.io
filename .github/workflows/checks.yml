@@ -27,13 +27,14 @@ jobs:
       - name: Check links (site, repos, CV)
         uses: lycheeverse/lychee-action@v2
         with:
+          lycheeVersion: v0.24.2
           fail: true
           args: >-
             --no-progress
             --root-dir ${{ github.workspace }}
             --exclude 'web\.app'
             --exclude 'linkedin\.com'
-            --exclude 'abraham-addai\.github\.io'
+            --exclude '^https://abraham-addai\.github\.io'
             index.html 404.html
 
       # Flutter Web apps on Firebase can be slow or flaky: warn, never fail.
@@ -41,6 +42,7 @@ jobs:
         continue-on-error: true
         uses: lycheeverse/lychee-action@v2
         with:
+          lycheeVersion: v0.24.2
           fail: true
           args: >-
             --no-progress
