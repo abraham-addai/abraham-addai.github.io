@@ -87,14 +87,296 @@
       </section>
 
       <section id="projects" class="section" aria-labelledby="projects-title">
-        <div class="container stack">
+        <div class="container stack-lg">
           <h2 id="projects-title">Projects</h2>
-          <p>
-            <mark class="todo"
-              >TODO: project cards (QuickPlate, UENR Flora, CampusPrint,
-              HostelHub) arrive in Phase 2</mark
+
+          <div class="projects projects--featured">
+            <article class="project" aria-labelledby="p-quickplate">
+              <div class="project__media">
+                <div class="frame-phone">
+                  <img
+                    src="assets/img/quickplate-tracking.webp"
+                    width="540"
+                    height="1138"
+                    loading="lazy"
+                    alt="QuickPlate order tracking screen: a status timeline from order placed to on the way, an arrival time, and a delivery map"
+                  />
+                </div>
+              </div>
+              <div class="project__body">
+                <h3 id="p-quickplate">QuickPlate</h3>
+                <p class="project__pitch">
+                  Food-delivery app with live order tracking.
+                </p>
+                <ul class="project__points">
+                  <li>
+                    Browse and search restaurants, build a cart and check out
+                    with a delivery pin on a map
+                  </li>
+                  <li>
+                    Order status updates live through Firestore, with push
+                    notifications (FCM)
+                  </li>
+                  <li>
+                    Flutter app using Provider for state management, backed by a
+                    Node/Express REST API
+                  </li>
+                </ul>
+                <ul class="tags">
+                  <li>Flutter</li>
+                  <li>Dart</li>
+                  <li>Provider</li>
+                  <li>Firebase Auth</li>
+                  <li>Firestore</li>
+                  <li>FCM</li>
+                  <li>REST API</li>
+                  <li>Node.js</li>
+                  <li>OpenStreetMap</li>
+                </ul>
+                <div class="cluster project__actions">
+                  <a
+                    class="btn btn--primary"
+                    href="https://github.com/abraham-addai/quickplate/releases/latest"
+                    target="_blank"
+                    rel="noopener"
+                    >Download APK<span class="visually-hidden">
+                      of QuickPlate for Android</span
+                    ><span class="visually-hidden">
+                      (opens in a new tab)</span
+                    ></a
+                  >
+                  <a
+                    class="btn"
+                    href="https://github.com/abraham-addai/quickplate"
+                    target="_blank"
+                    rel="noopener"
+                    >Source<span class="visually-hidden">
+                      code of QuickPlate on GitHub</span
+                    ><span class="visually-hidden">
+                      (opens in a new tab)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project" aria-labelledby="p-flora">
+              <div class="project__media">
+                <div class="frame-browser">
+                  <img
+                    src="assets/img/uenr-flora-desktop.webp"
+                    width="1200"
+                    height="750"
+                    loading="lazy"
+                    alt="UENR Flora dashboard on desktop: a welcome banner with Scan a Plant and Explore Species buttons, and counts of species documented and scans"
+                  />
+                </div>
+              </div>
+              <div class="project__body">
+                <p class="badge">Featured</p>
+                <h3 id="p-flora">UENR Flora</h3>
+                <p class="project__pitch">
+                  AI plant identification web app built for UENR (capstone
+                  project).
+                </p>
+                <ul class="project__points">
+                  <li>
+                    Identifies 76 plant species from an image and runs a
+                    separate healthy/unhealthy check
+                  </li>
+                  <li>
+                    Two-headed MobileNetV2 model running with TensorFlow.js
+                  </li>
+                  <li>
+                    Flutter Web front end with a Supabase (PostgreSQL) backend
+                  </li>
+                </ul>
+                <dl class="stats">
+                  <div>
+                    <dt>Training images</dt>
+                    <dd>9,044</dd>
+                  </div>
+                  <div>
+                    <dt>Species, top-1 accuracy</dt>
+                    <dd>87.69%</dd>
+                  </div>
+                  <div>
+                    <dt>Health, binary accuracy</dt>
+                    <dd>93.29%</dd>
+                  </div>
+                </dl>
+                <p class="small muted">
+                  Accuracy as reported in the project thesis.
+                </p>
+                <ul class="tags">
+                  <li>Flutter Web</li>
+                  <li>Dart</li>
+                  <li>Supabase</li>
+                  <li>PostgreSQL</li>
+                  <li>TensorFlow.js</li>
+                  <li>MobileNetV2</li>
+                </ul>
+                <div class="cluster project__actions">
+                  <a
+                    class="btn btn--primary"
+                    href="https://uenr-flora.web.app"
+                    target="_blank"
+                    rel="noopener"
+                    >Live demo<span class="visually-hidden"> of UENR Flora</span
+                    ><span class="visually-hidden">
+                      (opens in a new tab)</span
+                    ></a
+                  >
+                  <a
+                    class="btn"
+                    href="https://github.com/abraham-addai/UENR-Flora"
+                    target="_blank"
+                    rel="noopener"
+                    >Source<span class="visually-hidden">
+                      code of UENR Flora on GitHub</span
+                    ><span class="visually-hidden">
+                      (opens in a new tab)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3 class="projects__subhead">More projects</h3>
+          <div class="projects projects--more">
+            <article
+              class="project project--small"
+              aria-labelledby="p-campusprint"
             >
-          </p>
+              <div class="project__media">
+                <div class="frame-placeholder">
+                  <mark class="todo"
+                    >TODO: CampusPrint screenshot (the live app opens on a
+                    sign-in screen)</mark
+                  >
+                </div>
+              </div>
+              <div class="project__body">
+                <h4 id="p-campusprint">CampusPrint</h4>
+                <p class="project__pitch">
+                  Order document printing from campus print shops, track the
+                  order, and get it delivered.
+                </p>
+                <ul class="project__points">
+                  <li>
+                    Separate flows for students, print shops, riders and admins:
+                    upload a document, configure the print job, pay, then follow
+                    the order on a live timeline with in-app chat
+                  </li>
+                  <li>
+                    Payments through Paystack, verified server-side in a
+                    Supabase Edge Function; other Edge Functions handle rider
+                    assignment, refunds and PDF analysis
+                  </li>
+                </ul>
+                <p>
+                  <mark class="todo"
+                    >TODO: confirm the CampusPrint bullets</mark
+                  >
+                </p>
+                <ul class="tags">
+                  <li>Flutter Web</li>
+                  <li>Dart</li>
+                  <li>Riverpod</li>
+                  <li>go_router</li>
+                  <li>Supabase</li>
+                  <li>PostgreSQL</li>
+                  <li>Supabase Edge Functions</li>
+                  <li>Paystack</li>
+                </ul>
+                <div class="cluster project__actions">
+                  <a
+                    class="btn btn--primary"
+                    href="https://campusprint-ng.web.app"
+                    target="_blank"
+                    rel="noopener"
+                    >Live demo<span class="visually-hidden">
+                      of CampusPrint</span
+                    ><span class="visually-hidden">
+                      (opens in a new tab)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project project--small"
+              aria-labelledby="p-hostelhub"
+            >
+              <div class="project__media">
+                <div class="frame-browser">
+                  <img
+                    src="assets/img/hostelhub-desktop.webp"
+                    width="1200"
+                    height="750"
+                    loading="lazy"
+                    alt="HostelHub home page on desktop: a campus photo with a search form for campus and room type"
+                  />
+                </div>
+              </div>
+              <div class="project__body">
+                <h4 id="p-hostelhub">HostelHub</h4>
+                <p class="project__pitch">
+                  Find and book student hostels near your campus.
+                </p>
+                <ul class="project__points">
+                  <li>
+                    Students browse hostels, view room details, book and see
+                    their booking history; owners manage hostels and rooms and
+                    track bookings and revenue; admins manage users and listings
+                  </li>
+                  <li>
+                    Firebase handles sign-in, the database, image storage and
+                    push notifications (Auth, Firestore, Storage, Cloud
+                    Messaging)
+                  </li>
+                </ul>
+                <p>
+                  <mark class="todo">TODO: confirm the HostelHub bullets</mark>
+                </p>
+                <ul class="tags">
+                  <li>Flutter</li>
+                  <li>Dart</li>
+                  <li>Riverpod</li>
+                  <li>go_router</li>
+                  <li>Firebase Auth</li>
+                  <li>Firestore</li>
+                  <li>Firebase Storage</li>
+                  <li>FCM</li>
+                </ul>
+                <div class="cluster project__actions">
+                  <a
+                    class="btn btn--primary"
+                    href="https://hostelhub-gh.web.app"
+                    target="_blank"
+                    rel="noopener"
+                    >Live demo<span class="visually-hidden"> of HostelHub</span
+                    ><span class="visually-hidden">
+                      (opens in a new tab)</span
+                    ></a
+                  >
+                  <a
+                    class="btn"
+                    href="https://github.com/abraham-addai/my_hostel_app"
+                    target="_blank"
+                    rel="noopener"
+                    >Source<span class="visually-hidden">
+                      code of HostelHub on GitHub</span
+                    ><span class="visually-hidden">
+                      (opens in a new tab)</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
