@@ -1,0 +1,49 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate HTML
+        run: npx --yes html-validate@8 index.html 404.html
+
+      - name: No TODO markers left
+        run: sh scripts/check-todos.sh
+
+      - name: Check links (site, repos, CV)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --root-dir ${{ github.workspace }}
+            --exclude 'web\.app'
+            --exclude 'linkedin\.com'
+            --exclude 'abraham-addai\.github\.io'
+            index.html 404.html
+
+      # Flutter Web apps on Firebase can be slow or flaky: warn, never fail.
+      - name: Check live app links (warning only)
+        continue-on-error: true
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            https://uenr-flora.web.app
+            https://campusprint-ng.web.app
+            https://hostelhub-gh.web.app
