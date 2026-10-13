@@ -1,4 +1,4 @@
-# Addai Yeboah Abraham | Flutter Developer
+# Abraham Addai Yeboah | Flutter Developer
 
 [![Checks](https://github.com/abraham-addai/abraham-addai.github.io/actions/workflows/checks.yml/badge.svg)](https://github.com/abraham-addai/abraham-addai.github.io/actions/workflows/checks.yml)
 
