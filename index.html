@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Abraham | Flutter Developer</title>
+    <title>Addai Yeboah Abraham | Flutter Developer</title>
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.dataset.theme = t;
+        }
+      } catch (e) {}
+    </script>
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/main.js" defer></script>
   </head>
@@ -14,21 +23,78 @@
 
     <header class="site-header">
       <div class="container site-header__inner">
-        <a class="logo" href="#top">Abraham</a>
+        <a class="logo" href="#top">Addai Yeboah Abraham</a>
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark theme"
+        >
+          <svg
+            class="icon icon--moon"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          >
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+          <svg
+            class="icon icon--sun"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4.5" />
+            <path
+              d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"
+            />
+          </svg>
+        </button>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main id="main">
       <section id="top" class="section hero" aria-labelledby="hero-title">
-        <div class="container">
-          <h1 id="hero-title">Abraham</h1>
-          <p class="lead">Flutter Developer</p>
+        <div class="container stack">
+          <p class="eyebrow">Flutter Developer</p>
+          <h1 id="hero-title">Addai Yeboah Abraham</h1>
+          <p class="lead hero__pitch">
+            I build mobile and web apps with Flutter, Firebase, Supabase and
+            REST APIs. Computer Science graduate from UENR, Ghana (2026), with
+            internship and remote software engineering experience.
+          </p>
+          <p class="hero__meta">
+            Ghana (remote-friendly). Open to full-time or part-time remote
+            roles.
+          </p>
+          <div class="cluster hero__actions">
+            <a class="btn btn--primary" href="#projects">View projects</a>
+            <a class="btn" href="assets/cv/Addai_Yeboah_Abraham_CV.pdf" download
+              >Download CV <span class="small">(PDF)</span></a
+            >
+            <a class="btn" href="mailto:addaiabraham76@gmail.com">Email me</a>
+          </div>
         </div>
       </section>
 
       <section id="projects" class="section" aria-labelledby="projects-title">
-        <div class="container">
+        <div class="container stack">
           <h2 id="projects-title">Projects</h2>
+          <p>
+            <mark class="todo"
+              >TODO: project cards (QuickPlate, UENR Flora, CampusPrint,
+              HostelHub) arrive in Phase 2</mark
+            >
+          </p>
         </div>
       </section>
 
@@ -37,27 +103,185 @@
         class="section"
         aria-labelledby="experience-title"
       >
-        <div class="container">
+        <div class="container stack-lg">
           <h2 id="experience-title">Experience</h2>
+
+          <ol class="timeline">
+            <li class="timeline__item">
+              <article>
+                <h3>Flutter Mobile Development Intern, Amalitech</h3>
+                <p class="timeline__meta">Kumasi · 2025</p>
+                <ul class="timeline__points">
+                  <li>
+                    Built features for NetSim, a team-built network simulation
+                    game in Flutter with Riverpod: a scenario editor for devices
+                    and their connections, player scoring with a leaderboard,
+                    and pause/resume for the simulation
+                  </li>
+                  <li>
+                    Modelled device errors in the simulation (error types, how
+                    each is handled, and automatic recovery after a grace
+                    period)
+                  </li>
+                  <li>
+                    Built the simulation logs end to end: the logs screen in
+                    Flutter and the log endpoints in the Node.js/Express
+                    backend, working in a feature-branch Git workflow with the
+                    team
+                  </li>
+                </ul>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <article>
+                <h3>Software Engineer, citiFoods</h3>
+                <p class="timeline__meta">Remote (Sweden) · 2023 to 2024</p>
+                <ul class="timeline__points">
+                  <li>
+                    Maintained a Flutter grocery app that sells food items
+                  </li>
+                  <li>
+                    Kept the product catalogue up to date and kept the app
+                    running for customers
+                  </li>
+                </ul>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <article>
+                <h3>Field Trainer, Ecom Ghana</h3>
+                <p class="timeline__meta">2020 to 2024</p>
+                <ul class="timeline__points">
+                  <li>
+                    Coordinated training sessions and supported the delivery of
+                    training activities
+                  </li>
+                  <li>Helped lead and guide junior trainers</li>
+                  <li>
+                    Trained people of all ages, with and without formal
+                    education
+                  </li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+
+          <div class="stack">
+            <h3>Education and certification</h3>
+            <ul class="plain-list">
+              <li>
+                BSc Computer Science, University of Energy and Natural Resources
+                (UENR), Ghana, completed 2026
+              </li>
+              <li>
+                AWS Certified Cloud Practitioner ·
+                <a
+                  href="https://www.credly.com/badges/fb28962f-560f-448c-9787-d24fbecd05da"
+                  target="_blank"
+                  rel="noopener"
+                  >Verify the AWS badge on Credly</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
       <section id="skills" class="section" aria-labelledby="skills-title">
-        <div class="container">
+        <div class="container stack-lg">
           <h2 id="skills-title">Skills</h2>
+          <div class="skills">
+            <div class="skill-group">
+              <h3>Mobile</h3>
+              <ul class="chips">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Provider</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Backend and cloud</h3>
+              <ul class="chips">
+                <li>Firebase (Auth, Firestore, Cloud Messaging)</li>
+                <li>Supabase</li>
+                <li>REST APIs</li>
+                <li>Node.js and Express</li>
+                <li>AWS (Cloud Practitioner level)</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Languages</h3>
+              <ul class="chips">
+                <li>Dart</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Machine learning</h3>
+              <ul class="chips">
+                <li>TensorFlow.js</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Tools</h3>
+              <ul class="chips">
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="contact" class="section" aria-labelledby="contact-title">
-        <div class="container">
+        <div class="container stack-lg">
           <h2 id="contact-title">Contact</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-list__label">Email</span>
+              <a href="mailto:addaiabraham76@gmail.com"
+                >addaiabraham76@gmail.com</a
+              >
+            </li>
+            <li>
+              <span class="contact-list__label">GitHub</span>
+              <a
+                href="https://github.com/abraham-addai"
+                target="_blank"
+                rel="noopener"
+                >github.com/abraham-addai</a
+              >
+            </li>
+            <li>
+              <span class="contact-list__label">LinkedIn</span>
+              <a
+                href="https://www.linkedin.com/in/abraham-addai-99b67a305"
+                target="_blank"
+                rel="noopener"
+                >linkedin.com/in/abraham-addai-99b67a305</a
+              >
+            </li>
+            <li>
+              <span class="contact-list__label">CV</span>
+              <a href="assets/cv/Addai_Yeboah_Abraham_CV.pdf" download
+                >Download CV (PDF)</a
+              >
+            </li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p class="muted">Built with plain HTML, CSS and JS.</p>
+      <div class="container site-footer__inner">
+        <p>© 2026 Addai Yeboah Abraham</p>
+        <p class="muted">
+          Built with plain HTML, CSS and JS.
+          <mark class="todo"
+            >TODO: link to the site's repo once it exists (Phase 4)</mark
+          >
+        </p>
       </div>
     </footer>
   </body>
