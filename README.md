@@ -25,10 +25,9 @@ css/styles.css    design tokens, light and dark themes, components
 js/main.js        theme toggle
 assets/           images (WebP), og-image, favicon, CV
 scripts/          check-todos.sh
-docs/             spec, content (source of truth), tasks, decisions
 ```
 
-All copy comes from `docs/CONTENT.md`. Edit that first, then the page.
+Planning docs (spec, content source of truth, task list, decision log) are kept locally and are not part of this repo.
 
 ## Checks
 

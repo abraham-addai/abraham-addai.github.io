@@ -24,3 +24,7 @@ lighthouse-*.json
 
 # Unedited originals (may contain personal details)
 private/
+
+# Planning docs: kept local, not published
+CLAUDE.md
+docs/
