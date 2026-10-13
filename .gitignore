@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Node (dev tooling only)
+node_modules/
+npm-debug.log*
+
+# Secrets
+.env
+.env.*
+
+# Playwright / Lighthouse output
+test-results/
+playwright-report/
+playwright/.cache/
+lighthouse-*.html
+lighthouse-*.json
