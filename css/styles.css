@@ -722,6 +722,10 @@ code {
   object-position: top;
 }
 
+.frame-browser--wide img {
+  aspect-ratio: 1200 / 567;
+}
+
 .frame-placeholder {
   display: grid;
   place-items: center;

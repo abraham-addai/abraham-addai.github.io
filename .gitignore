@@ -21,3 +21,6 @@ playwright-report/
 playwright/.cache/
 lighthouse-*.html
 lighthouse-*.json
+
+# Unedited originals (may contain personal details)
+private/
