@@ -524,6 +524,221 @@ code {
   }
 }
 
+/* Projects ------------------------------------------------------------- */
+
+.projects {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 60rem) {
+  .projects--featured {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
+  .projects--more {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.projects__subhead {
+  margin-top: var(--space-7);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.project:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.project__media {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project--small .project__media {
+  aspect-ratio: 16 / 9;
+}
+
+.project__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.project__body h3,
+.project__body h4 {
+  font-size: var(--text-lg);
+}
+
+.project__pitch {
+  color: var(--color-muted);
+}
+
+.project__points {
+  padding-left: 1.2em;
+}
+
+.project__points li + li {
+  margin-top: var(--space-2);
+}
+
+.project__actions {
+  margin-top: auto;
+  padding-top: var(--space-3);
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 0.1em 0.6em;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+}
+
+.tags li {
+  padding: 0.1em 0.55em;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-block: 1px solid var(--color-border);
+}
+
+.stats dt {
+  order: 2;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: var(--color-muted);
+}
+
+.stats dd {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* Device frames (CSS only, no branded images) */
+
+.project__media:has(.frame-phone) {
+  position: relative;
+}
+
+.frame-phone {
+  position: absolute;
+  top: var(--space-5);
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 540 / 1138;
+  padding: 6px;
+  border-radius: 1.5rem;
+  background: #11181c;
+  box-shadow: var(--shadow-md);
+}
+
+.frame-phone img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.1rem;
+  object-fit: cover;
+}
+
+.frame-browser {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.frame-browser::before {
+  content: "";
+  display: block;
+  height: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  background:
+    radial-gradient(circle, #ef6a5e 0.22rem, transparent 0.24rem) 0.6rem
+      center / 0.7rem 100% no-repeat,
+    radial-gradient(circle, #f4bf4f 0.22rem, transparent 0.24rem) 1.3rem
+      center / 0.7rem 100% no-repeat,
+    radial-gradient(circle, #61c454 0.22rem, transparent 0.24rem) 2rem center /
+      0.7rem 100% no-repeat,
+    var(--color-surface);
+}
+
+.frame-browser img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+}
+
+.frame-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-4);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project:hover {
+    transform: none;
+  }
+}
+
 /* Experience timeline --------------------------------------------------- */
 
 .timeline {
